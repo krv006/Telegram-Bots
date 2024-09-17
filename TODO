@@ -1,0 +1,17 @@
+
+
+
+EVOS BOT:
+    project blocklash
+    /start bosganda user saqlash
+    buttons qurish
+
+    state
+    router
+
+
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/krv006/Telegram-Bots.git
+git push -u origin main
