@@ -10,7 +10,7 @@ router = Router()
 
 @router.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
-    await message.answer(f"<i>Assalomu aleykum, <b>{message.from_user.full_name} 👋🏻</b> silka yuboring !</i>")
+    await message.answer(f"<i>Assalomu aleykum, <b>{message.from_user.full_name} 👋🏻</b> link yuboring !</i>")
     answer = await message.answer(text=f"👇🏻")
 
 
