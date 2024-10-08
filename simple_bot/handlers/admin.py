@@ -1,4 +1,4 @@
-from aiogram import Router
+from aiogram import Router, F
 from aiogram.filters import CommandStart, IS_ADMIN
 from aiogram.types import Message, KeyboardButton
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
@@ -20,3 +20,13 @@ async def is_admin(message: Message):
     rkb = ReplyKeyboardBuilder(btn)
     rkb.adjust(2)
     return message.answer("Siz adminsiz.", reply_markup=rkb.as_markup(resize_keyboard=True))
+
+
+@admin_router.message(F.text == ('user_list'))
+async def user_list(message: Message):
+    await message.answer("Userlar listi !")
+
+
+@admin_router.message(F.text == ('admin_list'))
+async def user_list(message: Message):
+    await message.answer("Admin listi !")
